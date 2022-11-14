@@ -1,0 +1,13 @@
+Write a program to find the smallest number in an array of 32 numbers . 
+AREA LARGEST,CODE,READONLY 
+ENTRY 
+START MOV R5,#6 
+LDR R1,=VALUE 
+LDR R2,[R1],#4 
+LOOP 
+LDR R4,[R1],#4 
+CMP R2,R4 
+BHI LOOP 1 (BHI: BRANCH ON HIGHER THAN) 
+MOV R2,R4 
+LOOP 1 
+

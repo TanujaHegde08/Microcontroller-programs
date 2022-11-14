@@ -1,0 +1,8 @@
+Write a program to multiply two 16 bit binary numbers. 
+AREA MULTIPLY,CODE,READONLY 
+ENTRY 
+START MOV R1,#0064 
+MOV R2,#0032 
+MUL R3,R1,R2 
+XSS B XSS 
+END 

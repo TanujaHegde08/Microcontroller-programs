@@ -1,0 +1,17 @@
+Write a program to add an array of 16 bit numbers and store the 32 bit result in internal RAM 
+AREA ARRAY, CODE, READONLY 
+ENTRY 
+START MOV R5,#4 
+MOV R0,#0 
+LDR R1,=VALUE 
+LOOP LDR R2,[R1],#2 
+LDR R3,MASK 
+AND R2,R2,R3 
+ADD R0,R0,R2 
+SUBS R5,R5,#1 
+CMP R5,#0 
+BNE LOOP 
+XSS B XSS 
+MASK DCD 0X0000FFFF 
+VALUE DCW 0XFFFF,0X3333,0X0001,0X4444 
+END 

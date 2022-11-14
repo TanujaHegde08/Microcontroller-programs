@@ -1,0 +1,16 @@
+Write a program to find the largest number in an array of 32 numbers. 
+AREA SMALLEST,CODE,READONLY 
+ENTRY 
+START MOV R5,#6 
+LDR R1,=VALUE 
+LDR R2,[R1],#4 
+LOOP 
+LDR R4,[R1],#4 
+CMP R2,R4 
+BLS LOOP 1 (BLS: BRANCH ON LOWER THAN OR SAME) 
+MOV R2,R4 
+LOOP 1 
+SUBS R5,R5,#1 
+CMP R5,#0 
+BNE LOOP 
+

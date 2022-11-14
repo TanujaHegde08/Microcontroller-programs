@@ -1,0 +1,13 @@
+Write a program to find the sum of first 10 integer numbers. 
+AREA SUM,CODE,READONLY 
+ENTRY 
+START MOV R5,#10 
+MOV R0,#0 
+MOV R1,#1 
+LOOP ADD R0,R0,R1 
+ADD R1,R1,#1 
+SUBS R5,R5,#1 
+CMP R5,#0 
+BNE LOOP 
+XSS B XSS 
+END 
